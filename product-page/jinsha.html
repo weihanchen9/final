@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="product-items.css">
-  <title>芬達 - 食品雜貨店</title>
-  <script src="product-items.js"></script>
+  <link rel="stylesheet" href="../assets/css/product-items.css">
+  <title>金沙巧克力 - 食品雜貨店</title>
+  <script src="../assets/js/product-items.js"></script>
 </head>
 <body>
   <div class="banner">
@@ -12,7 +12,7 @@
     
   <div class="product-details">
     <div class="product-image">
-        <img src="../photo/fenda.jpg" alt="芬達">
+        <img src="../assets/photo/jinsha.jpg" alt="金沙巧克力">
         <div class="buy-button">
             <button onclick="openForm()">直接購買</button>
 
@@ -20,7 +20,7 @@
                 <h2>網購限定便利商店領貨！免運費！！</h2>
                 <form onsubmit="submitForm();">
                     <div style="margin-bottom: 20px;">
-                        <label for="name" style="margin-bottom: 5px;">購買產品：芬達&nbsp;30元/瓶</label>
+                        <label for="name" style="margin-bottom: 5px;">購買產品：金沙巧克力&nbsp;80元/盒</label>
                     </div>
                     <input type="text" placeholder="姓名" id="name" required>
                     <input type="tel" placeholder="手機" id="phone" required>
@@ -39,13 +39,13 @@
     <!--產品資料-->
     
     <div class="product-info">
-      <h2>芬達</h2>
-      <p><strong>品名：</strong>芬達</p>
-      <p><strong>來源地：</strong>美國加州</p>
-      <p><strong>成分：<br></strong>以新鮮水果為基礎，添加碳酸水、天然香料和糖分，提供清涼爽口的飲品體驗。</p>
-      <p><strong>保存方式：<br></strong>請存放於陰涼乾燥的地方，避免陽光直射。</p>
+      <h2>金沙巧克力</h2>
+      <p><strong>品名：</strong>金沙巧克力</p>
+      <p><strong>來源地：</strong>厄瓜多爾安第斯山脈</p>
+      <p><strong>成分：<br></strong>採用來自厄瓜多爾的優質可可豆，添加純正牛奶、天然香料和精選糖分，精心製作而成。</p>
+      <p><strong>保存方式：<br></strong>建議存放於乾燥涼爽的地方，避免陽光直射，以保持巧克力的質地和口感。</p>
       <p><strong>保存期限：<br></strong>產品質量最佳期限為購買後12個月。</p>
-      <p><strong>售價：</strong>NTD 30元/瓶</p>
+      <p><strong>售價：</strong>NTD 80元/盒</p>
     </div>
   </div>
 
@@ -53,11 +53,11 @@
    <!--星星動畫-->
   <div class="left-block">
     <div class="rating">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(1)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(2)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(3)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(4)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(5)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(1)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(2)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(3)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(4)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(5)">
       <button onclick="submitRating()">送出</button>
     </div>
      <!--使用者輸入評論-->
@@ -68,7 +68,7 @@
   </div>
    <!--顯示使用者給的星星和留言-->
   <div class="right-block">
-    <div class="rb-title"><h3>芬達</h3></div>
+    <div class="rb-title"><h3>金沙巧克力</h3></div>
     <div class="statistics">
       <div class="average-rating"><h4>平均評分:</h4> <span id="average-rating">4.0顆星/總共3人參與評分</span></div>
     </div>
@@ -134,14 +134,14 @@
 
     function fillStars(index) {
     for (let i = 0; i <= index; i++) {
-        stars[i].src = '../photo/star-filled.png';
+        stars[i].src = '../assets/photo/star-filled.png';
     }
     }
 
     function resetStars() {
     for (let i = 0; i < stars.length; i++) {
         if (i >= currentRating) {
-        stars[i].src = '../photo/star-empty.png';
+        stars[i].src = '../assets/photo/star-empty.png';
         }
     }
     }

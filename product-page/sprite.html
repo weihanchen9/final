@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="product-items.css">
+  <link rel="stylesheet" href="../assets/css/product-items.css">
   <title>雪碧 - 食品雜貨店</title>
-  <script src="product-items.js"></script>
+  <script src="../assets/js/product-items.js"></script>
 </head>
 <body>
   <div class="banner">
@@ -12,7 +12,7 @@
     
   <div class="product-details">
     <div class="product-image">
-        <img src="../photo/sprite.jpg" alt="雪碧">
+        <img src="../assets/photo/sprite.jpg" alt="雪碧">
         <div class="buy-button">
             <button onclick="openForm()">直接購買</button>
 
@@ -53,11 +53,11 @@
    <!--星星動畫-->
   <div class="left-block">
     <div class="rating">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(1)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(2)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(3)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(4)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(5)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(1)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(2)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(3)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(4)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(5)">
       <button onclick="submitRating()">送出</button>
     </div>
      <!--使用者輸入評論-->
@@ -134,14 +134,14 @@
 
     function fillStars(index) {
     for (let i = 0; i <= index; i++) {
-        stars[i].src = '../photo/star-filled.png';
+        stars[i].src = '../assets/photo/star-filled.png';
     }
     }
 
     function resetStars() {
     for (let i = 0; i < stars.length; i++) {
         if (i >= currentRating) {
-        stars[i].src = '../photo/star-empty.png';
+        stars[i].src = '../assets/photo/star-empty.png';
         }
     }
     }

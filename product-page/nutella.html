@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="product-items.css">
-  <title>Yu-Ki巧克力夾心餅 - 食品雜貨店</title>
-  <script src="product-items.js"></script>
+  <link rel="stylesheet" href="../assets/css/product-items.css">
+  <title>榛果巧克力夾心餅 - 食品雜貨店</title>
+  <script src="../assets/js/product-items.js"></script>
 </head>
 <body>
   <div class="banner">
@@ -12,7 +12,7 @@
     
   <div class="product-details">
     <div class="product-image">
-        <img src="../photo/yuki-chocolate.jpg" alt="榛果巧克力夾心餅照片">
+        <img src="../assets/photo/nutella.jpg" alt="榛果巧克力夾心餅">
         <div class="buy-button">
             <button onclick="openForm()">直接購買</button>
 
@@ -20,7 +20,7 @@
                 <h2>網購限定便利商店領貨！免運費！！</h2>
                 <form onsubmit="submitForm();">
                     <div style="margin-bottom: 20px;">
-                        <label for="name" style="margin-bottom: 5px;">購買產品：Yu-Ki巧克力夾心餅&nbsp;30元/盒</label>
+                        <label for="name" style="margin-bottom: 5px;">購買產品：榛果巧克力夾心餅&nbsp;25元/盒</label>
                     </div>
                     <input type="text" placeholder="姓名" id="name" required>
                     <input type="tel" placeholder="手機" id="phone" required>
@@ -39,13 +39,13 @@
     <!--產品資料-->
     
     <div class="product-info">
-      <h2>Yu-Ki巧克力夾心餅</h2>
-      <p><strong>品名：</strong>Yu-Ki巧克力夾心餅</p>
+      <h2>榛果巧克力夾心餅</h2>
+      <p><strong>品名：</strong>榛果巧克力夾心餅</p>
       <p><strong>來源地：</strong>Fantasia甜點工坊</p>
-      <p><strong>成分：<br></strong>麵粉、植物油、糖、可可粉、巧克力夾心餡料、雞蛋、鹽</p>
+      <p><strong>成分：<br></strong>麵粉、植物油、糖、可可粉、巧克力（包括榛果巧克力）、榛果醬、雞蛋、鹽</p>
       <p><strong>保存方式：<br></strong>請存放於陰涼乾燥處，避免潮濕和陽光直射。</p>
-      <p><strong>保存期限：<br></strong>一般保存期限為6個月至1年，詳細日期請參考包裝上的標示。</p>
-      <p><strong>售價：</strong>NTD 30元/盒</p>
+      <p><strong>保存期限：<br></strong>一般保存期限為6個月至1年，詳細日期請參考商品包裝上的標示。</p>
+      <p><strong>售價：</strong>NTD 25元/包</p>
     </div>
   </div>
 
@@ -53,11 +53,11 @@
    <!--星星動畫-->
   <div class="left-block">
     <div class="rating">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(1)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(2)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(3)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(4)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(5)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(1)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(2)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(3)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(4)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(5)">
       <button onclick="submitRating()">送出</button>
     </div>
      <!--使用者輸入評論-->
@@ -68,7 +68,7 @@
   </div>
    <!--顯示使用者給的星星和留言-->
   <div class="right-block">
-    <div class="rb-title"><h3>Yu-Ki巧克力夾心餅</h3></div>
+    <div class="rb-title"><h3>榛果巧克力夾心餅</h3></div>
     <div class="statistics">
       <div class="average-rating"><h4>平均評分:</h4> <span id="average-rating">4.0顆星/總共3人參與評分</span></div>
     </div>
@@ -134,14 +134,14 @@
 
     function fillStars(index) {
     for (let i = 0; i <= index; i++) {
-        stars[i].src = '../photo/star-filled.png';
+        stars[i].src = '../assets/photo/star-filled.png';
     }
     }
 
     function resetStars() {
     for (let i = 0; i < stars.length; i++) {
         if (i >= currentRating) {
-        stars[i].src = '../photo/star-empty.png';
+        stars[i].src = '../assets/photo/star-empty.png';
         }
     }
     }

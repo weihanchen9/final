@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="product-items.css">
-  <title>IQ CAT - 食品雜貨店</title>
-  <script src="product-items.js"></script>
+  <link rel="stylesheet" href="../assets/css/product-items.css">
+  <title>牛肉乾 - 食品雜貨店</title>
+  <script src="../assets/js/product-items.js"></script>
 </head>
 <body>
   <div class="banner">
@@ -12,7 +12,7 @@
     
   <div class="product-details">
     <div class="product-image">
-        <img src="../photo/iqcat.jpg" alt="IQ CAT">
+        <img src="../assets/photo/beef-jerky.jpg" alt="牛肉乾">
         <div class="buy-button">
             <button onclick="openForm()">直接購買</button>
 
@@ -20,7 +20,7 @@
                 <h2>網購限定便利商店領貨！免運費！！</h2>
                 <form onsubmit="submitForm();">
                     <div style="margin-bottom: 20px;">
-                        <label for="name" style="margin-bottom: 5px;">購買產品：IQ CAT&nbsp;150元/包</label>
+                        <label for="name" style="margin-bottom: 5px;">購買產品：牛肉乾&nbsp;80元/包</label>
                     </div>
                     <input type="text" placeholder="姓名" id="name" required>
                     <input type="tel" placeholder="手機" id="phone" required>
@@ -39,13 +39,13 @@
     <!--產品資料-->
     
     <div class="product-info">
-      <h2>IQ CAT</h2>
-      <p><strong>品名：</strong>IQ CAT</p>
-      <p><strong>來源地：</strong>荷蘭阿姆斯特丹</p>
-      <p><strong>成分：</strong>選用優質深海魚肉、天然雞肉、蔬果纖維、豐富的維生素和礦物質，營養均衡。</p>
-      <p><strong>保存方式：</strong>建議存放於乾燥涼爽的地方，避免陽光直射，以保持貓糧的新鮮度。</p>
-      <p><strong>保存期限：</strong>產品質量最佳期限為購買後12個月。</p>
-      <p><strong>售價：</strong>NTD 150元/包</p>
+      <h2>牛肉乾</h2>
+      <p><strong>品名：</strong>牛肉乾</p>
+      <p><strong>來源地：</strong>台灣</p>
+      <p><strong>成分：</strong>牛肉、醬油、糖、鹽、香料</p>
+      <p><strong>保存方式：<br></strong>請存放於陰涼乾燥處，避免潮濕和陽光直射。</p>
+      <p><strong>保存期限：<br></strong>一般保存期限為1年以上，詳細的保存期限請參考商品包裝上的標示日期。</p>
+      <p><strong>售價：</strong>NTD 80/包</p>
     </div>
   </div>
 
@@ -53,11 +53,11 @@
    <!--星星動畫-->
   <div class="left-block">
     <div class="rating">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(1)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(2)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(3)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(4)">
-      <img class="star" src="../photo/star-empty.png" onclick="setRating(5)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(1)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(2)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(3)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(4)">
+      <img class="star" src="../assets/photo/star-empty.png" onclick="setRating(5)">
       <button onclick="submitRating()">送出</button>
     </div>
      <!--使用者輸入評論-->
@@ -68,7 +68,7 @@
   </div>
    <!--顯示使用者給的星星和留言-->
   <div class="right-block">
-    <div class="rb-title"><h3>IQ CAT</h3></div>
+    <div class="rb-title"><h3>牛肉乾</h3></div>
     <div class="statistics">
       <div class="average-rating"><h4>平均評分:</h4> <span id="average-rating">4.0顆星/總共3人參與評分</span></div>
     </div>
@@ -134,14 +134,14 @@
 
     function fillStars(index) {
     for (let i = 0; i <= index; i++) {
-        stars[i].src = '../photo/star-filled.png';
+        stars[i].src = '../assets/photo/star-filled.png';
     }
     }
 
     function resetStars() {
     for (let i = 0; i < stars.length; i++) {
         if (i >= currentRating) {
-        stars[i].src = '../photo/star-empty.png';
+        stars[i].src = '../assets/photo/star-empty.png';
         }
     }
     }
