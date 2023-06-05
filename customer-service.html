@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="customer-service.css">
+  <title>食品雜貨店－客服中心</title>
+  <script src="customer-service.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <h1>食品雜貨店－客服中心</h1>
+    </div>
+  
+    <main>
+        <div class="service-announcement">
+            <h2>服務公告</h2>
+            <div class="announcement-content">
+                <div class="announcement">公告 1：我們將於下個月推出新的會員優惠活動。</div>
+                <div class="announcement">公告 2：系統維護將於本週末進行，可能會影響部分服務的可用性。</div>
+                <div class="announcement">公告 3：感謝大家的支持，我們已開設新的分店。</div>
+                <div class="announcement">公告 4：聖誕節期間，我們將提供額外的優惠折扣。</div>
+                <div class="announcement">公告 5：為了提供更好的服務，我們已更新隱私政策。</div>
+                <div class="announcement">公告 6：特別通知，本週五門市休息一天，敬請諒解。</div>
+            </div>
+        </div>
+
+    
+        <div class="FAQ" id="QA">
+            <h2>常見問題</h2>
+            <div class="foreword">
+                <p>以下是一些常見問題和解答，您可以在這裡找到有關我們服務的相關信息。如果您的問題未在此列出，請聯繫我們的客服團隊。</p>
+                <br>
+            </div>
+        
+            <div id="page1" class="page">
+                <div class="faq">
+                    <div class="question">問題 1：如何註冊成為會員？</div>
+                    <div class="answer">答：您可以在我們的網站上點擊"註冊"按鈕，填寫所需信息並創建一個帳戶。</div>
+                </div>
+                <div class="faq">
+                    <div class="question">問題 2：如何查詢訂單狀態？</div>
+                    <div class="answer">答：您可以登錄您的會員帳戶，進入"訂單記錄"頁面查詢您的訂單狀態。</div>
+                </div>
+                <div class="faq">
+                    <div class="question">問題 3：退換貨政策是什麼？</div>
+                    <div class="answer">答：我們提供30天內退換貨服務，請保持商品完好並附上原始包裝。</div>
+                </div>
+                <div class="faq">
+                    <div class="question">問題 4：付款方式有哪些？</div>
+                    <div class="answer">答：我們接受信用卡、轉帳和支付寶等多種付款方式。</div>
+                </div>
+                <div class="faq">
+                    <div class="question">問題 5：如何聯繫客服？</div>
+                    <div class="answer">答：您可以通過我們的在線聊天系統或發送郵件至eugene891031@gmail.com與我們聯繫。</div>
+                </div>
+            </div>
+            
+            <div id="page2" class="page">
+                <div class="faq">
+                    <div class="question">問題 6：運送方式和運費如何計算？</div>
+                    <div class="answer">答：運送方式和運費根據您的訂單內容和運送地點進行計算，詳細信息可在結算頁面查看。</div>
+                </div>
+                <div class="faq">
+                    <div class="question">問題 7：是否提供國際運送？</div>
+                    <div class="answer">答：是的，我們提供國際運送服務。您可以在結算頁面選擇您的國家和運送方式。</div>
+                </div>
+                <div class="faq">
+                    <div class="question">問題 8：如何取消訂單？</div>
+                    <div class="answer">答：若需取消訂單，請在訂單成立後盡快聯繫客服，我們將協助您處理取消事宜。</div>
+                </div>
+                <div class="faq">
+                    <div class="question">問題 9：是否提供批發價格和折扣？</div>
+                    <div class="answer">答：我們提供批發價格和折扣，具體資訊可聯繫我們的銷售團隊獲取。</div>
+                </div>
+                <div class="faq">
+                    <div class="question">問題 10：退款流程需要多久？</div>
+                    <div class="answer">答：一般情況下，我們會在收到退回商品後的3個工作日內處理退款事宜。</div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <span>頁數：</span>
+                <button class="pageBtn" onclick="showPage(1)">1</button>
+                <button class="pageBtn" onclick="showPage(2)">2</button>
+            </div>
+        </div>
+
+        <!--此js必須放在body才能運作-->
+        <script>
+            function showPage(page) {
+                var pages = document.getElementsByClassName("page");
+                var buttons = document.getElementsByClassName("pageBtn");
+                
+                // 隱藏所有頁面和按鈕
+                for (var i = 0; i < pages.length; i++) {
+                    pages[i].style.display = "none";
+                    buttons[i].classList.remove("active");
+                }
+                
+                // 顯示選定的頁面和按鈕
+                pages[page - 1].style.display = "block";
+                buttons[page - 1].classList.add("active");
+            }
+
+            // 默認顯示第一頁
+            showPage(1);
+        </script>
+    </main>
+
+    
+    <aside>
+        <div class="feedback" id="FBK">
+            <h2>意見回饋</h2>
+            <p>歡迎提供您的意見和反饋。我們重視您的意見並將努力改善我們的服務品質。請填寫以下表單，我們將盡快回覆您的意見。</p>
+            <form id="feedbackForm" onsubmit="submitFeedback(event)">
+                <label for="name">姓名：</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="message">意見內容：</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <input type="submit" value="提交意見">
+            </form>
+        </div>
+    </aside>
+
+    </body>
+</html>
+

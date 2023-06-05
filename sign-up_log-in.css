@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #FFEECC;
+    height: 100px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/*動態廣告*/
+.ad-container {
+    position: relative;
+    width: 800px;
+    height: 330px;
+    overflow: hidden;
+    float: left;
+    margin: 150px 100px 0px 90px;
+}
+
+.ad-slideshow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.ad-slide {
+    flex: 0 0 100%;
+}
+
+.ad-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ad-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ad-controls span {
+    font-size: 100px;
+    cursor: pointer;
+    color: rgb(0, 162, 255);
+}
+
+.ad-controls span:hover {
+    color: #072ef0;
+}
+
+/*動態廣告到這*/
+
+/* 外層容器樣式 */
+.login-container {
+    width: 300px;
+    padding: 60px;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 90px 0px 0px;
+}
+
+/* 標題樣式 */
+.login-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 輸入框樣式 */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 登入按鈕樣式 */
+.login-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f9a72b;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #f97e1a;
+}
+
+/* 功能鍵樣式 */
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.action-button {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #38a5f9;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #197cfe;
+}
+
+.nonmember-login {
+    padding: 10px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="member-info.css">
+    <title>會員資訊</title>
+</head>
+<body>
+    <h2>會員資訊</h2>
+
+    <div id="member-info"></div>
+    <div class="btn-return">
+        <a href="sign-up_log-in.html">返回登入介面</a>
+    </div>
+    
+<!--必須寫在body的js，否則功能跑不動-->
+    <script>
+        // 從 localStorage 中讀取資料
+        var memberInfo = localStorage.getItem("memberInfo");
+
+        // 檢查是否有資料
+        if (memberInfo) {
+            // 將資料轉換為表格
+            var tableContent = decodeURIComponent(memberInfo);
+            document.getElementById("member-info").innerHTML = tableContent;
+        } else {
+            // 若沒有資料，顯示提示訊息
+            document.getElementById("member-info").innerHTML = "<div class='no-data'>沒有會員資訊</div>";
+        }
+
+        // 彈出提示框
+        window.onload = function() {
+            alert("恭喜您！註冊完成了！");
+        };
+    </script>
+</body>
+</html>

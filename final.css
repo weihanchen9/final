@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.banner {
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.yellow-banner {
+    background-color: #FFEECC;
+    height: 100px;
+}
+
+.pink-banner {
+    background-color: #FFC0CB;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-item {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFC0CB;
+    min-width: 160px;
+    z-index: 2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #fa64a0;
+}
+
+.menu-item:hover {
+    font-size: 1.1em;
+    /* 滑鼠移動到選單項目時，字體放大 */
+}
+
+/* 新增下方 CSS */
+.menu-item:hover {
+    transform: scale(1.1);
+    /* 滑鼠移動到選單項目時，進行縮放放大 */
+}
+
+.vertical-nav {
+    position: fixed;
+    top: 180px;
+    /* 修改這一行，使其位於登入/註冊下方 */
+    left: 0;
+    width: 100px;
+    background-color: #FFC0CB;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    /* 新增這一行，使下拉式選單為垂直排列 */
+    align-items: center;
+    border: double;
+    border-color: #fa64a0;
+    height: 25px;
+    /* 修改這一行，將高度調整為25px */
+    padding: 10px;
+}
+
+.vertical-nav .menu-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.vertical-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFC0CB;
+    min-width: 120px;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+}
+
+.vertical-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.vertical-nav .dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.vertical-nav .dropdown-content a:hover {
+    background-color: #fa64a0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 滑鼠點擊商品的陰影 */
+.product-item.highlight {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/*動態廣告*/
+.ad-container {
+    position: relative;
+    width: 800px;
+    height: 330px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.ad-slideshow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.ad-slide {
+    flex: 0 0 100%;
+}
+
+.ad-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ad-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ad-controls span {
+    font-size: 100px;
+    cursor: pointer;
+    color: rgb(0, 162, 255);
+}
+
+.ad-controls span:hover {
+    color: #072ef0;
+}
+
+/*動態廣告到這*/
+
+
+.promotion-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*好吃的、好喝的、寵物食品，製作循環滑動*/
+.product-container {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.product-section {
+    width: 100%;
+}
+
+.product-section h2 {
+    text-align: center;
+    padding: 50px;
+}
+
+.product-row {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /*justify-content: space-around;
+    padding: 50px;*/
+
+}
+
+.product-item {
+    flex: 0 0 260px;
+    width: 260px;
+    height: 430px;
+    padding: 10px;
+    /*background-color: rgb(208, 250, 255);*/
+    margin-right: 10px;
+    text-align: center;
+    /*調整商品標價位置*/
+    position: relative;
+}
+
+.product-item img {
+    width: 160px;
+    height: 180px;
+}
+
+.product-price {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    /*調整商品標價位置*/
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.slider-controls span {
+    font-size: 50px;
+    color: blue;
+    cursor: pointer;
+
+}
+
+.slider-controls .prev {
+    margin-left: 0px;
+}
+
+.slider-controls .next {
+    margin-right: 0px;
+}

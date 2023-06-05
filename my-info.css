@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fbdcf7;
+    padding: 0px;
+    margin: 0;
+}
+
+.banner {
+    height: 120px;
+    text-align: center;
+    background-color: rgb(113, 192, 252);
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+h2 {
+    margin-top: 100px;
+    margin-left: 150px;
+    text-align: left;
+}
+
+table {
+    width: 80%;
+
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f9a72b;
+    color: #fff;
+}
+
+.no-data {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-return {
+    display: block;
+    width: 200px;
+    margin: 100px auto;
+    padding: 10px;
+    background-color: #f9a72b;
+    color: #000;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-return:hover {
+    background-color: #f97e1a;
+    color: #000;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*消費紀錄的表格*/
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+
+}
+
+/*調整購買紀錄表格*/
+.th-pchistory {
+    width: 25%;
+}
+
+/*調整評論紀錄表格*/
+.th-cmhistory {
+    width: 25%;
+}

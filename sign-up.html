@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign-up.css">
+    <title>會員註冊</title>
+    <script src="sign-up_log-in_ad.js"></script> 
+</head>
+<body>
+    <div class="banner yellow-banner"><h2>食品雜貨店</h2></div>
+
+    <div class="ad-container">
+        <div class="ad-slideshow">
+          <div class="ad-slide">
+            <img src="photo/adv-mother'sday.jpg" alt="Ad 1" />
+          </div>
+          <div class="ad-slide">
+            <img src="photo/adv-520.jpg" alt="Ad 2" />
+          </div>
+          <div class="ad-slide">
+            <img src="photo/adv-member.jpg" alt="Ad 3" />
+          </div>
+          <div class="ad-slide">
+            <img src="photo/adv-promotion.jpg" alt="Ad 4" />
+          </div>
+        </div>
+        <div class="ad-controls">
+          <span class="prev">&#8249;</span>
+          <span class="next">&#8250;</span>
+        </div>
+    </div>
+
+    <div class="registration-form">
+        <h2>會員註冊</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">性別:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">請選擇</option>
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">年齡:</label>
+                <input type="number" id="age" name="age" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="username">帳號:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密碼:</label>
+                <input type="password" id="password" name="password" required>
+                <button class="show-password" type="button" onclick="togglePasswordVisibility()">&#128065;</button>
+            </div>
+            <div class="form-group">
+                <label for="email">信箱:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">手機:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <button type="submit" class="submit-button">註冊</button>
+        </form>
+        <div class="success-message" id="success-message">註冊完成！</div>
+    </div>
+
+    <!--此js必須放在body才能跑-->
+    <!--關於表單的動畫和儲存到會員資料-->
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var showPasswordButton = document.querySelector(".show-password");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                showPasswordButton.innerHTML = "&#128065;"; // 顯示眼睛開啟符號
+            } else {
+                passwordInput.type = "password";
+                showPasswordButton.innerHTML = "&#128064;"; // 顯示眼睛關閉符號
+            }
+        }
+
+        var form = document.getElementById("signup-form");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // 防止表單直接提交
+
+            // 獲取輸入值
+            var name = document.getElementById("name").value;
+            var gender = document.getElementById("gender").value;
+            var age = document.getElementById("age").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            // 建立表格內容
+            var tableContent = "<table>";
+            tableContent += "<tr><td>姓名:</td><td>" + name + "</td></tr>";
+            tableContent += "<tr><td>性別:</td><td>" + gender + "</td></tr>";
+            tableContent += "<tr><td>年齡:</td><td>" + age + "</td></tr>";
+            tableContent += "<tr><td>帳號:</td><td>" + username + "</td></tr>";
+            tableContent += "<tr><td>密碼:</td><td>" + password + "</td></tr>";
+            tableContent += "<tr><td>信箱:</td><td>" + email + "</td></tr>";
+            tableContent += "<tr><td>手機:</td><td>" + phone + "</td></tr>";
+            tableContent += "</table>";
+
+            // 將表格內容存儲到 localStorage
+            localStorage.setItem("memberInfo", tableContent);
+
+            // 重新導向到 member-info.html 頁面
+            window.location.href = "member-info.html";
+        });
+    </script>
+</body>
+</html>
+

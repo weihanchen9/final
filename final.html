@@ -3,40 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="final.css">
   <title>電商網頁</title>
-  <script src="script.js"></script>
+  <script src="final.js"></script>
 </head>
 <body>
   <header>
-    <div class="banner yellow-banner">食品雜貨店</div>
+    <div class="banner yellow-banner"><h2>食品雜貨店</h2></div>
     <div class="banner pink-banner">
-      <div class="menu-item">登入/註冊</div>
+      <div class="menu-item"><a href="sign-up_log-in.html">登入/註冊</a></div>
       <div class="dropdown">
         <div class="menu-item">會員專區</div>
         <div class="dropdown-content">
-          <a href="#">會員資料</a>
-          <a href="#">購物需知</a>
-          <a href="#">服務條款</a>
+          <a href="my-info.html">個人資料</a>
+          <a href="shopping-notice-and-terms-of-service.html">購物須知</a>
+          <a href="shopping-notice-and-terms-of-service.html#Terms-of-Service">服務條款</a>
         </div>
       </div>
       <div class="dropdown">
-        <div class="menu-item">客服中心</div>
+        <div class="menu-item"><a href="customer-service.html">客服中心</a></div>
         <div class="dropdown-content">
-          <a href="#">意見回饋</a>
-          <a href="#">常見問題</a>
-          <a href="#">服務公告</a>
+          <a href="customer-service.html#FBK">意見回饋</a>
+          <a href="customer-service.html#QA">常見問題</a>
+          <a href="customer-service.html">服務公告</a>
         </div>
       </div>
       <div class="dropdown">
-        <div class="menu-item">關於我們</div>
+        <div class="menu-item"><a href="about-us.html">關於老闆</a></div>
         <div class="dropdown-content">
-          <a href="#">品牌歷史</a>
-          <a href="#">聯絡我們</a>
+          <a href="about-us.html">品牌歷史</a>
+          <a href="about-us.html#contact-boss">聯絡老闆</a>
         </div>
       </div>
     </div>
   </header>
+
+
   <div class="vertical-nav">
     <div class="menu-item dropdown">
       <span>商品專區</span>
@@ -48,136 +50,293 @@
       </div>
     </div>
   </div>
-  
-  <section id="promotions" class="product-section">
-    <h2>優惠活動</h2>
-    <div class="product-row">
-      <!-- 優惠活動商品1 -->
-      <div class="product-item" data-link="yuki-chocolate.html">
-        <img src="photo/yuki-chocolate.jpg" alt="巧克力夾心餅">
-        <p>Yuki巧克力夾心餅</p>
-      </div>
-      <!-- 優惠活動商品2 -->
-      <div class="product-item">
-        <img src="photo/laiyike.jpg" alt="來一客">
-        <p>來一客泡麵</p>
-      </div>
-      <!-- 優惠活動商品3 -->
-      <div class="product-item">
-        <img src="photo/cocacola.jpg" alt="可口可樂">
-        <p>可口可樂</p>
-      </div>
-      <!-- 優惠活動商品4 -->
-      <div class="product-item">
-        <img src="photo/lays-classic.jpg" alt="原味樂事">
-        <p>原味樂事</p>
-      </div>
+
+<br><br><br>
+<div class="ad-container">
+  <div class="ad-slideshow">
+    <div class="ad-slide">
+      <img src="photo/adv-mother'sday.jpg" alt="Ad 1" />
     </div>
-  </section>
+    <div class="ad-slide">
+      <img src="photo/adv-520.jpg" alt="Ad 2" />
+    </div>
+    <div class="ad-slide">
+      <img src="photo/adv-member.jpg" alt="Ad 3" />
+    </div>
+    <div class="ad-slide">
+      <img src="photo/adv-promotion.jpg" alt="Ad 4" />
+    </div>
+  </div>
+  <div class="ad-controls">
+    <span class="prev">&#8249;</span>
+    <span class="next">&#8250;</span>
+  </div>
+</div>
+
+<section id="promotions" class="product-section">
+  <h2>優惠活動</h2>
+  <div class="promotion-row">
+    <!-- 優惠活動商品1 -->
+    <div class="product-item" data-link="nutella.html">
+      <img src="photo/nutella.jpg" alt="榛果巧克力夾心餅">
+      <p>榛果巧克力夾心餅</p>
+      <p>
+        濃郁魅力，融化口感，滿滿的榛果巧克力香，讓您沉浸於榛果與巧克力的絕妙滋味之中。
+      </p>
+      <br><br>
+      <p style="color: red; font-weight: bold; font-size: 20px;">
+          <span style="text-decoration: line-through;color: red;">原價：50元</span>
+          &nbsp&nbsp&nbsp特價：25元
+      </p>
+    </div>
+    <!-- 優惠活動商品2 -->
+    <div class="product-item" data-link="fin.html">
+      <img src="photo/fin.jpg" alt="fin">
+      <p>FIN</p>
+      <p>
+        清爽解渴，融合豐富營養成分的運動飲料，為您注入能量，讓您保持活力。
+      </p>
+      <br><br>
+      <p style="color: red; font-weight: bold; font-size: 20px;">
+        <span style="text-decoration: line-through;">原價：30元</span>
+          &nbsp&nbsp&nbsp特價：20元
+      </p>
+    </div>
+    <!-- 優惠活動商品3 -->
+    <div class="product-item" data-link="royalcanin.html">
+      <img src="photo/royalcanin.jpg" alt="法國皇家狗糧">
+      <p>法國皇家狗糧</p>
+      <p>
+        專業研發的法國皇家狗糧，提供均衡營養，讓您的愛犬保持健康活力，是最佳的餵養選擇。
+      </p>
+      <br><br>
+      <p style="color: red; font-weight: bold; font-size: 20px;">
+        <span style="text-decoration: line-through;">原價：100元</span>
+          &nbsp&nbsp&nbsp特價：80元
+      </p>
+    </div>
+    
+  </div>
+</section>
   
-  <section id="good-to-eat" class="product-section">
-    <h2>好吃的</h2>
+<!-- 商品循環輪播 -->
+<section id="good-to-eat" class="product-section">
+  <h2>好吃的</h2>
+  <div class="product-container">
+    <div class="slider-controls">
+      <span class="prev">&lt;</span>
+      <span class="next">&gt;</span>
+    </div>
     <div class="product-row">
-      <!-- 好吃的1 -->
-      <div class="product-item">
+      <div class="product-item" data-link="yuki-chocolate.html">
+        <!-- 商品1的內容 -->
         <img src="photo/yuki-chocolate.jpg" alt="巧克力夾心餅">
         <p>Yuki巧克力夾心餅<br><br>
-          一口咬下，濃郁的巧克力與鬆脆的餅乾完美結合，帶來絕妙的口感和美味的享受。</p>
+        一口咬下，濃郁的巧克力與鬆脆的餅乾完美結合，帶來絕妙的口感和美味的享受。
+        </p><br><br>
+        <p class="product-price">
+        售價：30元/盒
+        </p>
       </div>
-      <!-- 好吃的2 -->
-      <div class="product-item">
+      <div class="product-item" data-link="laiyike.html">
+        <!-- 商品2的內容 -->
         <img src="photo/laiyike.jpg" alt="來一客">
         <p>來一客泡麵<br><br>
-          美味可口的泡麵，讓您在忙碌的日子中能輕鬆享受一碗熱騰騰的美味料理。
+        美味可口的泡麵，讓您在忙碌的日子中能輕鬆享受一碗熱騰騰的美味料理。
+        </p><br><br>
+        <p class="product-price">
+        售價：25元/盒
         </p>
       </div>
-      <!-- 好吃的3 -->
-      <div class="product-item">
+      <div class="product-item" data-link="jinsha.html">
+        <!-- 商品3的內容 -->
         <img src="photo/jinsha.jpg" alt="金沙">
         <p>金沙巧克力<br><br>
-          口感細膩的巧克力，外層包覆著香甜的金沙粉，帶給您一種獨特的口味享受。
+        口感細膩的巧克力，外層包覆著香甜的金沙粉，帶給您一種獨特的口味享受。
+        </p><br><br>
+        <p class="product-price">
+        售價：80元/盒
         </p>
       </div>
-      <!-- 好吃的4 -->
-      <div class="product-item">
+      <div class="product-item" data-link="lays.html">
+        <!-- 商品4的內容 -->
         <img src="photo/lays-classic.jpg" alt="原味樂事">
         <p>原味樂事<br><br>
-          輕薄酥脆的原味樂事薯片，經典中的經典，為您帶來無可抵擋的脆爽風味。
+        輕薄酥脆的原味樂事薯片，經典中的經典，為您帶來無可抵擋的脆爽風味。
+        </p><br><br>
+        <p class="product-price">
+        售價：30元/包
+        </p>
+      </div>
+      <div class="product-item" data-link="beef-jerky.html">
+        <!-- 商品5的內容 -->
+        <img src="photo/beef-jerky.jpg" alt="牛肉乾">
+        <p>牛肉乾<br><br>
+          鹹香濃郁，口感獨特，讓您一嚼傳統滋味，回味無窮。
+        </p><br><br>
+        <p class="product-price">
+        售價：80元/包
+        </p>
+      </div>
+      <div class="product-item" data-link="gummi.html">
+        <!-- 商品6的內容 -->
+        <img src="photo/gummi.jpg" alt="小熊軟糖">
+        <p>小熊軟糖<br><br>
+          蓬鬆可愛，甜蜜心意，讓你回味童年的糖果風情。
+        </p><br><br>
+        <p class="product-price">
+        售價：50元/包
         </p>
       </div>
     </div>
-  </section>
-  
-  <section id="good-to-drink" class="product-section">
-    <h2>好喝的</h2>
+  </div>
+</section>
+
+
+<section id="good-to-drink" class="product-section">
+  <h2>好喝的</h2>
+  <div class="product-container">
+    <div class="slider-controls">
+      <span class="prev">&lt;</span>
+      <span class="next">&gt;</span>
+    </div>
     <div class="product-row">
-      <!-- 好喝的1 -->
-      <div class="product-item">
+      <div class="product-item" data-link="lipton.html">
+        <!-- 商品7的內容 -->
+        <img src="photo/lipton.jpg" alt="立頓奶茶">
+        <p>立頓奶茶<br><br>
+          濃醇香醇，一口嚐盡滋味，帶您享受無與倫比的茶葉饗宴。
+        </p><br><br>
+        <p class="product-price">
+        售價：25元/瓶
+        </p>
+      </div>
+      <div class="product-item" data-link="blacktea.html">
+        <!-- 商品8的內容 -->
+        <img src="photo/blacktea.jpg" alt="麥香紅茶">
+        <p>麥香紅茶<br><br>
+          香氣四溢，濃郁芬芳，將您帶入一段優雅的茶香之旅，愜意享受每一口。
+        </p><br><br>
+        <p class="product-price">
+        售價：25元/瓶
+        </p>
+      </div>
+      <div class="product-item" data-link="sprite.html">
+        <!-- 商品9的內容 -->
         <img src="photo/sprite.jpg" alt="雪碧">
         <p>雪碧<br><br>
           清爽的碳酸飲料，口感氣泡細緻，帶來解渴的快感，成為您日常生活中的好夥伴。
+        </p><br><br>
+        <p class="product-price">
+        售價：30元/瓶
         </p>
-        </div>
-        <!-- 好喝的2 -->
-        <div class="product-item">
-          <img src="photo/fenda.jpg" alt="芬達">
-          <p>芬達<br><br>
-            豐富的果香與氣泡結合，讓您享受水果的美味，為您帶來愉悅的口感體驗。
-          </p>
-        </div>
-        <!-- 好喝的3 -->
-        <div class="product-item">
-          <img src="photo/cocacola.jpg" alt="可口可樂">
-          <p>可口可樂<br><br>
-            經典的汽水飲料，混合了完美的泡沫和甜蜜的滋味，帶來無與倫比的暢快口感。
-          </p>
-        </div>
-        <!-- 好喝的4 -->
-        <div class="product-item">
-          <img src="photo/lipton.jpg" alt="立頓奶茶">
-          <p>立頓奶茶<br><br>
-            濃郁香醇的奶茶，帶給您悠閒的下午時光，讓您品味純正的茶葉風味。
-          </p>
-        </div>
       </div>
-    </section>
-    
-    <section id="pet-products" class="product-section">
-      <h2>寵物食品</h2>
-      <div class="product-row">
-        <!-- 寵物商品1 -->
-        <div class="product-item">
-          <img src="photo/iqdog-beef.jpg" alt="IQ DOG">
-          <p>IQ Dog<br><br>
-            提升狗狗智力和身體健康的狗糧，給予您的愛犬完整且均衡的營養，讓牠保持活力和快樂。
-          </p>
-        </div>
-        <!-- 寵物商品2 -->
-        <div class="product-item">
-          <img src="photo/maturedog.jpg" alt="MATURE DOG">
-          <p>科克蘭狗糧<br><br>
-            高品質的狗糧，為您的狗狗提供全面的營養，促進牠們的健康和活力。
-          </p>
-        </div>
-        <!-- 寵物商品3 -->
-        <div class="product-item">
-          <img src="photo/iqcat.jpg" alt="IQ CAT">
-          <p>IQ Cat<br><br>
-            提升貓咪智力和整體健康的貓糧，滿足貓咪的營養需求，促進牠們的消化和免疫系統功能，讓牠們保持活躍和快樂。
-          </p>
-        </div>
-        <!-- 寵物商品4 -->
-        <div class="product-item">
-          <img src="photo/whiskas.jpg" alt="whiskas">
-          <p>偉嘉貓糧<br><br>
-            高品質的貓咪食品，提供豐富的營養素和天然成分，維護貓咪的健康和毛髮狀態，讓牠們擁有健康的生活。
-          </p>
-        </div>
+      <div class="product-item" data-link="fenda.html">
+        <!-- 商品10的內容 -->
+        <img src="photo/fenda.jpg" alt="芬達">
+        <p>芬達<br><br>
+          豐富的果香與氣泡結合，讓您享受水果的美味，為您帶來愉悅的口感體驗。
+        </p><br><br>
+        <p class="product-price">
+        售價：30元/瓶
+        </p>
       </div>
-    </section>
-      
+      <div class="product-item" data-link="cocacola.html">
+        <!-- 商品11的內容 -->
+        <img src="photo/cocacola.jpg" alt="可口可樂">
+        <p>可口可樂<br><br>
+          無限快樂，冰涼一口，讓您沉浸在純粹的喜悅時刻中。
+        </p><br><br>
+        <p class="product-price">
+          售價：30元/瓶
+        </p>
+      </div>
+      <div class="product-item" data-link="corn-soup.html">
+        <!-- 商品12的內容 -->
+        <img src="photo/corn-soup.jpg" alt="玉米濃湯">
+        <p>玉米濃湯<br><br>
+          濃郁滋味，口感豐潤，讓您品味濃郁的玉米風味，享受美味的舌尖盛宴。
+        </p><br><br>
+        <p class="product-price">
+          售價：150元/袋(12包入)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- 其他商品專區的代碼... -->
+
+<section id="pet-products" class="product-section">
+  <h2>寵物食品</h2>
+  <div class="product-container">
+    <div class="slider-controls">
+      <span class="prev">&lt;</span>
+      <span class="next">&gt;</span>
+    </div>
+    <div class="product-row">
+      <div class="product-item" data-link="iqdog-beef.html">
+        <!-- 商品13的內容 -->
+        <img src="photo/iqdog-beef.jpg" alt="IQ DOG">
+        <p>IQ DOG<br><br>
+          智慧營養，獨特護理，為您的毛小孩提供全方位的健康成長，讓牠活力四溢，智慧無限。
+        </p><br><br>
+        <p class="product-price">
+        售價：100元/包
+        </p>
+      </div>
+      <div class="product-item" data-link="iqcat.html">
+        <!-- 商品14的內容 -->
+        <img src="photo/iqcat.jpg" alt="IQ CAT">
+        <p>IQ CAT<br><br>
+          智慧營養，味道撲鼻，為您的貓咪提供全面的營養支持，讓牠保持活力與聰明，展現無限智慧。
+        </p><br><br>
+        <p class="product-price">
+        售價：150元/包
+        </p>
+      </div>
+      <div class="product-item" data-link="maturedog.html">
+        <!-- 商品15的內容 -->
+        <img src="photo/maturedog.jpg" alt="科克蘭狗糧">
+        <p>科克蘭狗糧<br><br>
+          天然健康，美味無比，以最高品質的成分為您的狗狗帶來全面的營養支持，讓牠健康快樂地成長。
+        </p><br><br>
+        <p class="product-price">
+        售價：130元/包
+        </p>
+      </div>
+      <div class="product-item" data-link="whiskas.html">
+        <!-- 商品16的內容 -->
+        <img src="photo/whiskas.jpg" alt="偉嘉貓糧">
+        <p>偉嘉貓糧<br><br>
+          優質營養，貼心呵護，為您的貓咪提供最佳的飲食選擇，讓牠保持健康活力，展現優雅魅力。
+        </p><br><br>
+        <p class="product-price">
+        售價：120元/包
+        </p>
+      </div>
+      <div class="product-item" data-link="cesar-dog.html">
+        <!-- 商品17的內容 -->
+        <img src="photo/cesar-dog.jpg" alt="西沙狗糧">
+        <p>西沙狗糧-南瓜波菜烤嫩雞<br><br>
+          天然美味，營養豐富，融合南瓜、菠菜和嫩雞的絕妙口感，為您的毛小孩帶來健康與享受。
+        </p><br><br>
+        <p class="product-price">
+        售價：50元/罐
+        </p>
+      </div>
+      <div class="product-item" data-link="cat-can.html">
+        <!-- 商品18的內容 -->
+        <img src="photo/cat-can.jpg" alt="貓罐頭">
+        <p>燒津貓罐頭-鮪魚<br><br>
+          香氣誘人，鮮美可口，以頂級鮪魚為主要成分，為您的貓咪帶來極致享受的味蕾盛宴。
+        </p><br><br>
+        <p class="product-price">
+        售價：60元/罐
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>

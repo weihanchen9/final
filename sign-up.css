@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #FFEECC;
+    height: 100px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/*動態廣告*/
+.ad-container {
+    position: relative;
+    width: 800px;
+    height: 330px;
+    overflow: hidden;
+    float: left;
+    margin: 150px 50px 0px 90px;
+}
+
+.ad-slideshow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.ad-slide {
+    flex: 0 0 100%;
+}
+
+.ad-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ad-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ad-controls span {
+    font-size: 100px;
+    cursor: pointer;
+    color: rgb(0, 162, 255);
+}
+
+.ad-controls span:hover {
+    color: #072ef0;
+}
+
+/*動態廣告到這*/
+
+/*註冊表單*/
+.registration-form {
+    width: 300px;
+    padding: 60px;
+    border: 1px solid #ccc;
+    float: left;
+    margin: 50px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    width: 100px;
+    font-weight: bold;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.show-password {
+    padding: 4px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.show-password:hover {
+    background-color: #aaa;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f9a72b;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #f97e1a;
+}
+
+.success-message {
+    display: none;
+    padding: 10px;
+    background-color: #55cc55;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}

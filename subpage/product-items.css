@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.banner {
+    height: 100px;
+    background-color: #ffa500;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.product-details {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 320px;
+    height: 360px;
+    margin: 40px;
+}
+
+.product-info {
+    width: 350px;
+    font-size: 16px;
+    color: #333333;
+}
+
+h2 {
+    font-size: 28px;
+    color: #ffa500;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: bold;
+
+}
+
+strong {
+    font-size: 18px
+}
+
+p {
+    font-size: 16px;
+    margin: 10px;
+    padding: 5px;
+}
+
+/*直接購買*/
+.buy-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.buy-button button {
+    width: 200px;
+    /* 設定按鈕的寬度 */
+    height: 40px;
+    /* 設定按鈕的高度 */
+    font-size: 16px;
+    /* 設定按鈕的字型大小 */
+    margin-top: 0px;
+    /* 設定按鈕與圖片之間的上方間距 */
+    background-color: #fd4a39;
+    color: white;
+}
+
+.buy-button button:hover {
+    background-color: #ff0000;
+    /* 按鈕滑過時的背景顏色 */
+    color: white;
+    /* 按鈕滑過時的文字顏色 */
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin: 0 5px;
+    /* 設置左右間距為 5 像素 */
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    z-index: 9999;
+}
+
+.form-popup h2 {
+    margin-top: 0;
+}
+
+.form-popup input[type="text"],
+.form-popup input[type="tel"],
+.form-popup input[type="number"] {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-popup button {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/*評論區塊*/
+.left-block {
+    width: 600px;
+    height: 200px;
+    background-color: #32a7f1;
+    margin: 100px 0px 0px 80px;
+    float: left;
+    border-radius: 5px;
+}
+
+
+.rating {
+    display: inline-block;
+    font-size: 24px;
+    color: #888888;
+    cursor: pointer;
+    padding: 10px 20px 0px 10px;
+}
+
+.rating .star {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.2s;
+}
+
+.rating .star.active {
+    opacity: 1;
+}
+
+.comment {
+    margin-top: 10px;
+    width: 600px;
+    height: 200px;
+    background-color: #b9f9fa;
+    border-radius: 5px;
+}
+
+.comment textarea {
+    width: 400px;
+    height: 150px;
+}
+
+.historical-comments {
+    margin-top: 20px;
+}
+
+.right-block {
+    width: 400px;
+    height: 350px;
+    background-color: #f5c6db;
+    margin: 100px 80px 50px 0px;
+    float: right;
+    width: 39%;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.rb-title h3 {
+    color: #ff0000;
+}
+
+.statistics {
+    margin-top: 20px;
+}
+
+.statistics .average-rating {
+    font-weight: bold;
+}

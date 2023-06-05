@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my-info.css">
+    <title>個人資料</title>
+</head>
+<body>
+    <div class="banner"><h1>會員專區 - 個人資料</h1></div>
+    
+
+    <div id="member-info"></div>
+    <!--此js一定要放在body才能實現功能-->
+    <script>
+        // 從 localStorage 中讀取資料
+        var memberInfo = localStorage.getItem("memberInfo");
+
+        // 檢查是否有資料
+        if (memberInfo) {
+            // 將資料轉換為表格
+            var tableContent = decodeURIComponent(memberInfo);
+            document.getElementById("member-info").innerHTML = tableContent;
+        } else {
+            // 若沒有資料，顯示提示訊息
+            document.getElementById("member-info").innerHTML = "<div class='no-data'>沒有會員資訊</div>";
+        }
+    </script>
+
+
+    <!-- 消費紀錄-->
+
+    <h2>購買紀錄</h2>
+    <table>
+        <thead>
+        <tr>
+            <th class="th-pchistory">品名單價</th>
+            <th>購買數量</th>
+            <th>總金額</th>
+            <th>日期</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>榛果巧克力夾心餅&nbsp;25元/盒</td>
+            <td>3</td>
+            <td>75</td>
+            <td>2023/5/26&nbsp;&nbsp;15:24</td>
+        </tr>
+        <tr>
+            <td>牛肉乾&nbsp;80元/包</td>
+            <td>1</td>
+            <td>80</td>
+            <td>2023/5/28&nbsp;&nbsp;10:13</td>
+        </tr>
+        <tr>
+            <td>芬達&nbsp;30元/瓶</td>
+            <td>2</td>
+            <td>60</td>
+            <td>2023/5/29&nbsp;&nbsp;20:13</td>
+        </tr>
+        <tr>
+            <td>IQ DOG&nbsp;100元/包</td>
+            <td>5</td>
+            <td>500</td>
+            <td>2023/6/2&nbsp;&nbsp;14:45</td>
+        </tr>
+        <tr>
+            <td>來一客泡麵&nbsp;25元/盒</td>
+            <td>5</td>
+            <td>125</td>
+            <td>2023/6/4&nbsp;&nbsp;19:21</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- 歷史評論-->
+
+    <h2>歷史評論</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="th-cmhistory">產品名稱</th>
+                <th>歷史評論</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>榛果巧克力夾心餅</td>
+                <td>看起來不錯吃，之後可以吃吃看。</td>
+            </tr>
+            <tr>
+                <td>牛肉乾</td>
+                <td>昨天才下訂單津天就到了，超快的！。</td>
+            </tr>
+            <tr>
+                <td>IQ DOG</td>
+                <td>我家狗滿喜歡吃的~</td>
+            </tr>
+            <tr>
+                <td>來一客泡麵</td>
+                <td>這家泡麵有夠便宜！</td>
+            </tr>
+            <tr>
+                <td>原味樂事</td>
+                <td>神秘的遠古島嶼？？？</td>
+            </tr>
+            <tr>
+                <td>麥香紅茶</td>
+                <td>阿…懷念的味道…</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="btn-return">
+        <a href="final.html">返回首頁</a>
+    </div>
+</body>
+</html>
