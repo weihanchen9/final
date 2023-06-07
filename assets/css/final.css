@@ -207,9 +207,6 @@ html {
 .product-row {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    /*justify-content: space-around;
-    padding: 50px;*/
-
 }
 
 .product-item {
@@ -217,7 +214,6 @@ html {
     width: 260px;
     height: 430px;
     padding: 10px;
-    /*background-color: rgb(208, 250, 255);*/
     margin-right: 10px;
     text-align: center;
     /*調整商品標價位置*/

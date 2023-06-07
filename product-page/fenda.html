@@ -116,6 +116,8 @@
     let totalRating = 3; // 假設預設有3個評分
     let averageRating = 4.0; // 假設預設平均評分為4.0
 
+
+    //星星變色
     stars.forEach((star, index) => {
     star.addEventListener('mouseover', () => {
         fillStars(index);
@@ -152,12 +154,12 @@
     }
 
     function submitComment() {
-    const comment = commentTextarea.value.trim();
+    const comment = commentTextarea.value.trim();  //通過 commentTextarea.value.trim() 獲取 commentTextarea 元素的值，並使用 trim() 方法去除前後空格。將結果存儲在 comment 變數中。
     if (comment !== '') {
-        const li = document.createElement('li');
+        const li = document.createElement('li'); // 創建一個新的 <li> 元素，並將 comment 的內容設置為該元素的文本內容。
         li.textContent = comment;
         commentList.appendChild(li);
-        commentTextarea.value = '';
+        commentTextarea.value = '';           //commentTextarea 元素的值清空，以便下一次提交。
     }
     }
 

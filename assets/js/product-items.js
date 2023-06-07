@@ -1,7 +1,7 @@
 
 //直接購買按鈕和表單
 function openForm() {
-    document.getElementById("formPopup").style.display = "block";
+    document.getElementById("formPopup").style.display = "block"; //openForm() 函式：當觸發事件時，此函式會將 formPopup 元素的 display 屬性設為 "block"，從而顯示表單彈出窗口。
 }
 
 function closeForm() {
